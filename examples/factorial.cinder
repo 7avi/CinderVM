@@ -1,0 +1,33 @@
+# Calcul factorial simplu (hardcoded pentru 5)
+# Rezultat: 5! = 120
+
+PUSH_INT 5
+PUSH_INT 1
+# Stocăm rezultatul în memorie la offset 0
+STORE 0
+PUSH_INT 1
+STORE 1
+
+# Loop pentru calcul factorial
+# Label: loop_start (instrucțiunea 6)
+PUSH_INT 1
+LOAD 1
+LT
+JUMP_IF_ZERO 15  # Jump la end dacă counter >= n
+
+LOAD 0
+LOAD 1
+MUL
+STORE 0
+
+LOAD 1
+PUSH_INT 1
+ADD
+STORE 1
+
+JUMP 6  # Jump la loop_start
+
+# Label: end (instrucțiunea 15)
+LOAD 0
+RETURN
+

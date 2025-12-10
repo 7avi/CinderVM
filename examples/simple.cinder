@@ -1,0 +1,10 @@
+# Program simplu de test pentru CinderVM
+# Calculează: (10 + 5) * 2
+
+PUSH_INT 10
+PUSH_INT 5
+ADD
+PUSH_INT 2
+MUL
+RETURN
+

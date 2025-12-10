@@ -1,0 +1,11 @@
+# Test operații aritmetice de bază
+
+PUSH_INT 20
+PUSH_INT 4
+DIV
+PUSH_INT 3
+ADD
+PUSH_INT 2
+MUL
+RETURN
+

@@ -1,0 +1,18 @@
+[package]
+name = "cindervm"
+version = "0.1.0"
+edition = "2021"
+authors = ["CinderVM Team"]
+description = "Motor de execuție JIT și sandbox pentru bytecode personalizat"
+
+[dependencies]
+clap = { version = "4.4", features = ["derive"] }
+anyhow = "1.0"
+thiserror = "1.0"
+
+[target.'cfg(unix)'.dependencies]
+libc = "0.2"
+
+[target.'cfg(windows)'.dependencies]
+winapi = { version = "0.3", features = ["memoryapi", "winnt", "processthreadsapi"] }
+
